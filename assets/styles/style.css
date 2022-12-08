@@ -1,0 +1,182 @@
+body {
+  font-family: sans-serif;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none !important;
+}
+
+.top-bar {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  background-color: rgb(247, 241, 233);
+}
+.fixed-top-2 {
+  margin-top: 24px;
+}
+.location-nav {
+  margin-top: 6px;
+  color: rgb(68, 160, 129);
+}
+.envelope-nav {
+  margin-top: 12px;
+  color: rgb(68, 160, 129);
+}
+.fa-facebook {
+  color: rgb(68, 160, 129);
+}
+.fa-twitter {
+  color: rgb(68, 160, 129);
+}
+.fa-linkedin {
+  color: rgb(68, 160, 129);
+}
+.fa-instagram {
+  color: rgb(68, 160, 129);
+}
+.home {
+  background-color: rgb(68, 160, 129);
+}
+.fa-cart-shopping {
+  color: rgb(68, 160, 129);
+}
+.fa-user {
+  color: rgb(68, 160, 129);
+}
+.fa-shoe-prints {
+  color: rgb(68, 160, 129);
+}
+#badge {
+  padding: 0 3px;
+  vertical-align: top;
+  background-color: rgb(242, 235, 26);
+  color: rgb(81, 41, 41);
+  font-size: 1.2rem;
+  /* font-weight: bold; */
+  border-radius: 5px;
+  position: relative;
+  top: -13px;
+  right: 1px;
+  width: 0.7rem;
+}
+.hero-page {
+  position: relative;
+}
+
+.overlay {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+.hero-word {
+  font-family: 'Brush Script MT', cursive;
+  margin-top: 150px;
+}
+.hero-head {
+  font-weight: 70px;
+  font-size: 70px;
+}
+.hero-paragraph {
+  font-weight: 40px;
+  font-size: 80px;
+}
+.head-line {
+  font-family: 'Brush Script MT', cursive;
+  margin-top: 75px;
+  font-weight: 60px;
+  font-size: 60px;
+  color: rgb(68, 160, 129);
+}
+.card {
+  height: 540px !important;
+  /* border: 1px solid green !important; */
+  border: none;
+  /* border-radius: 20px; */
+}
+.card-img-top {
+  height: 300px;
+  object-fit: contain;
+  object-position: center;
+  box-shadow: 5px 10px yellow;
+}
+.cart-btn {
+  background-color: rgb(68, 160, 129) !important;
+}
+.footer {
+  height: 250px;
+}
+.input-email {
+  background-color: rgb(247, 241, 233) !important;
+}
+.cart-hero-image {
+  height: 720px;
+  width: 100%;
+}
+.shopping_cart {
+  color: rgb(68, 160, 129) !important;
+}
+.cart-shoe {
+  height: 150px;
+}
+thead {
+  width: 100%;
+}
+td {
+  vertical-align: middle;
+}
+.fa-trash {
+  cursor: pointer;
+  color: red;
+}
+.cart-text {
+  font-size: 20px;
+}
+.cart-header {
+  font-size: 25px;
+}
+
+@media (max-width: 1098) {
+  .input-group {
+    display: block;
+  }
+}
+@media (max-width: 993px) {
+  .card {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 769px) {
+  .hero-head {
+    font-weight: 60px;
+    font-size: 50px;
+  }
+  .hero-paragraph {
+    font-weight: 30px;
+    font-size: 50px;
+  }
+}
+@media (max-width: 737px) {
+  .footer {
+    height: 800px;
+  }
+}
+@media (max-width: 576px) {
+  .head-line {
+    margin-top: 200px;
+  }
+}
+@media (max-width: 574px) {
+  .card {
+    height: 450px;
+  }
+  .card-img-top {
+    height: 270;
+  }
+}
