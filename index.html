@@ -199,11 +199,11 @@
 				<div class="col-xl-3 col-lg-3 col-md-6 col-10">
 				<div>
 				<div class="card mb-4" style='border:none;'>
-					<a href='#'><img src=${data.cover_photo.file} class="card-img-top mt-5 " alt="shoe"style='border: 2px solid green;border-radius:10px;'></a>
+					<a href='product-detail.html?product_id=${data.id}'><img src=${data.cover_photo.file} class="card-img-top mt-5 " alt="shoe"style='border: 2px solid green;border-radius:10px;'></a>
 					<div class="card-body text-center" >
 					<h5 class="card-title ">${data.title}</h5>
 					<p class="card-text">€${data.price}</p>
-								<a href='product-detail.html'><button type="button" class="btn btn-warning text-white">View</button></a>
+								<a href='product-detail.html?product_id=${data.id}'><button type="button" class="btn btn-warning text-white">View</button></a>
 					<a href="#" class="btn cart-btn text-white" onclick="addToCart(event)" target=${data.id}>Add to Cart</a>
 					</div>
 				</div>
