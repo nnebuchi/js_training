@@ -116,8 +116,9 @@ a {
   background-color: rgb(247, 241, 233) !important;
 }
 .cart-hero-image {
-  height: 720px;
+  height: 620px;
   width: 100%;
+  margin-top: 125px;
 }
 .shopping_cart {
   color: rgb(68, 160, 129) !important;
@@ -135,13 +136,29 @@ td {
   cursor: pointer;
   color: red;
 }
+.table-detail {
+  width: 100%;
+}
 .cart-text {
   font-size: 20px;
 }
 .cart-header {
   font-size: 25px;
 }
-
+.card-img-top2 {
+  height: 430px;
+  object-fit: contain;
+  object-position: top;
+}
+.detail-page {
+  margin-top: 210px;
+}
+.detail-title {
+  margin-top: 81px;
+}
+.wishlist {
+  cursor: pointer;
+}
 @media (max-width: 1098) {
   .input-group {
     display: block;
@@ -150,6 +167,14 @@ td {
 @media (max-width: 993px) {
   .card {
     margin-bottom: 20px;
+  }
+}
+@media (max-width: 784px) {
+  .cart-header {
+    font-size: 20px;
+  }
+  .cart-shoe {
+    height: 90px;
   }
 }
 @media (max-width: 769px) {
@@ -167,6 +192,11 @@ td {
     height: 800px;
   }
 }
+@media (max-width: 605px) {
+  .cart-shoe {
+    height: 50px;
+  }
+}
 @media (max-width: 576px) {
   .head-line {
     margin-top: 200px;
@@ -178,5 +208,19 @@ td {
   }
   .card-img-top {
     height: 270;
+  }
+  .cart-text {
+    font-size: 12px;
+  }
+  .cart-header {
+    font-size: 14px;
+  }
+}
+@media (max-width: 422px) {
+  .cart-hero-image {
+    height: 200px;
+  }
+  .cart-shoe {
+    height: 30px;
   }
 }
