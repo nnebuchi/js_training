@@ -218,7 +218,7 @@
 					<h5 class="card-title ">${data.title}</h5>
 					<p class="card-text">€${data.price}</p>
 								<a href='product-detail.html?product_id=${data.id}'><button type="button" class="btn btn-warning text-white">View</button></a>
-					<a href="#" class="btn cart-btn text-white" onclick="addToCart(event)" target=${data.id}>Add to Cart</a>
+					<a href="#" class="btn cart-btn text-white" onclick="handleAddToCart(event)" target=${data.id}>Add to Cart</a>
 					</div>
 				</div>
 				</div>
@@ -227,7 +227,19 @@
 			});
 			document.querySelector('#products-container').innerHTML = cardProduct;
 		});
-
+		const handleAddToCart= (event)=>{
+			product_id=event.target.getAttribute('target')
+			addToCart(product_id)
+			.then((sendData) => {
+   			console.log(sendData);
+        // setCartCookies(cart)
+      })
+			.catch((err)=>{
+            alert(err)
+        })
+		}
 	</script>
 </body>
 </html>
+// call addToCart function
+            // in the .then block, call setCartCookies function and pass the cart from the response gotten from addTOCart function
