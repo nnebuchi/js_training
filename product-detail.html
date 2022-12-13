@@ -150,7 +150,7 @@
                     </select>
                 </div>
                 <div class="mt-4 text-center wishlist">Add to the wishlist&nbsp;<span><i class="fa-solid fa-heart text-danger"></i></span></div>
-                <div class="text-center mt-3"><button type="button" class="btn btn-success" >Add To Cart</button></div>
+                <div class="text-center mt-3"><button type="button" class="btn btn-success" onclick="addToCart(product_id)" >Add To Cart</button></div>
           </div>
         </div>
       </div>
@@ -209,7 +209,7 @@
 
 
       getSingleProducts(product_id)
-      .then((response) => {
+       .then((response) => {
         if(response.status !='success'){
             alert(response.error)
         }else{
@@ -224,7 +224,7 @@
 
 
 
-        })
+      })
         .catch((err)=>{
             alert(err)
         })
@@ -239,7 +239,12 @@
         const setCart = () =>{
             // call addToCart function
             // in the .then block, call setCartCookies function and pass the cart from the response gotten from addTOCart function
-        }
+            addToCart().then((sendData) => {
+   			console.log(sendData);
+        setCartCookies(cart)
+            })
+          }
+
     </script>
   </body>
 </html>
