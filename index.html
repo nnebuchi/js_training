@@ -108,7 +108,7 @@
 								<a class="nav-link" href="#"><i class="fa-solid fa-user"></i></a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="./cart.html"><i class="fa-solid fa-cart-shopping"></i><span id="badge">0</span></a>
+								<a class="nav-link" href="./cart.html"><i class="fa-solid fa-cart-shopping"></i><span id="badge" class="cart-count">0</span></a>
 							</li>
 						</ul>
 						<form class="d-flex">
@@ -218,7 +218,7 @@
 					<h5 class="card-title ">${data.title}</h5>
 					<p class="card-text">€${data.price}</p>
 								<a href='product-detail.html?product_id=${data.id}'><button type="button" class="btn btn-warning text-white">View</button></a>
-					<a href="#" class="btn cart-btn text-white" onclick="handleAddToCart(event)" target=${data.id}>Add to Cart</a>
+					<a href="javascript:void(0)" class="btn cart-btn text-white" onclick="handleAddToCart(event)" target-id=${data.id}>Add to Cart</a>
 					</div>
 				</div>
 				</div>
@@ -228,18 +228,25 @@
 			document.querySelector('#products-container').innerHTML = cardProduct;
 		});
 		const handleAddToCart= (event)=>{
-			product_id=event.target.getAttribute('target')
+			product_id=event.target.getAttribute('target-id')
 			addToCart(product_id)
 			.then((sendData) => {
    			console.log(sendData);
-        // setCartCookies(cart)
+   			/*
+				sendData is an object
+				1. check if status is equal to success and if it is,:
+					a. setCartCookies(cart); note, the cart is coming from sendData
+				else:
+				2. alert (sendData.error)
+   			*/	
+        	
       })
 			.catch((err)=>{
             alert(err)
         })
 		}
+
+		// appendCartCount(".cart-count")
 	</script>
 </body>
 </html>
-// call addToCart function
-            // in the .then block, call setCartCookies function and pass the cart from the response gotten from addTOCart function
