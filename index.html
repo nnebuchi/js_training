@@ -33,7 +33,7 @@
 <body>
 	<section>
 		<div >
-			<!-- Load Navbar here and replcae this -->
+			<!-- Load Navbar here and replace this -->
 			<nav  class="navbar navbar-expand-lg navbar-light  top-bar fixed-top" style="height: 25px;">
 				<div class="container-fluid py-5 px-5">
 					<!-- <a class="navbar-brand" href="#">Navbar</a>
@@ -239,8 +239,14 @@
 					a. setCartCookies(cart); note, the cart is coming from sendData
 				else:
 				2. alert (sendData.error)
-   			*/	
-        	
+   			*/
+				if(status===success){
+					setCartCookies(sendData.cart)
+				}else{
+					alert(sendData.error)
+
+				}
+
       })
 			.catch((err)=>{
             alert(err)
@@ -248,6 +254,8 @@
 		}
 
 		// appendCartCount(".cart-count")
+		// const cart_count=response.sendData
+		// document.querySelector('.cart-count').innerHTML=0
 
 	</script>
 </body>
